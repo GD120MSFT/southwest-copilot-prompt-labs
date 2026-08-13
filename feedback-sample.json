@@ -1,0 +1,54 @@
+{
+  "schema": "swa-copilot-lab-feedback/1",
+  "submissionId": "MEJ8F2K9QW",
+  "businessUnit": "Customer Care",
+  "role": "Customer Advocacy Specialist",
+  "name": "Dana Whitmore",
+  "team": "Executive Office",
+  "submitted": "2026-08-20T15:42:11.204Z",
+  "ratingCount": 3,
+  "newPromptCount": 1,
+  "averageStars": 4.3,
+  "ratings": [
+    {
+      "promptId": "care-1",
+      "libraryRef": "1",
+      "title": "Put a draft on Southwest’s approved voice",
+      "application": "Copilot in Outlook / Word",
+      "kpi": "CC-Response Quality & Accuracy",
+      "stars": 5,
+      "comment": "Worked first time. Had to add 'keep the confirmation number' or it dropped it."
+    },
+    {
+      "promptId": "care-8",
+      "libraryRef": "8",
+      "title": "Triage the queue without collapsing rows",
+      "application": "Copilot in Excel",
+      "kpi": "CC-Case Handling Productivity & Throughput",
+      "stars": 3,
+      "comment": "Merged rows anyway on the second run. Batching instruction needs to be firmer."
+    },
+    {
+      "promptId": "care-33",
+      "libraryRef": "33",
+      "title": "Role-play the hard conversation",
+      "application": "Copilot chat (work)",
+      "kpi": "CC-Team Capability & Coaching",
+      "stars": 5,
+      "comment": "Best one. Would use this in onboarding."
+    }
+  ],
+  "newPrompts": [
+    {
+      "title": "Same-flight consolidation note",
+      "goal": "Draft a consolidation note",
+      "context": "as a Customer Advocacy Specialist, using our approved tone",
+      "source": "the attached case export and our SharePoint policy library",
+      "expect": "Return a table. Cite the document and date. Where data is missing insert [NEED].",
+      "who": "Advocacy Specialists, Executive Complaint Liaison",
+      "prompt": "Draft a consolidation note as a Customer Advocacy Specialist, using our approved tone\\n\\nSource: the attached case export and our SharePoint policy library\\n\\nReturn a table. Cite the document and date. Where data is missing insert [NEED].",
+      "persona": "advocacy",
+      "when": "2026-08-20T15:39:02.881Z"
+    }
+  ]
+}

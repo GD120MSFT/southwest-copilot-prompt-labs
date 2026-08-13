@@ -45,11 +45,19 @@ then re-copy the regenerated HTML files into the repo.
 ## Collecting feedback
 
 GitHub Pages is static, so there is no backend. Participants' ratings and prompt ideas
-save to their own browser (`localStorage`) and are exported from the **What's next** tab as
-`.json`, `.csv`, or a pre-filled email.
+save to their own browser (`localStorage`) as they go.
 
-To route feedback into a Microsoft Form instead, set `formsUrl` in `build.py`
-(`build_payload`) to the Form URL and rebuild — a button appears on the last tab.
+**See `FEEDBACK.md` for the full setup.** Short version — three options:
+
+| Option | Participant effort | What you get | Set it up |
+|---|---|---|---|
+| **Power Automate HTTP flow** (recommended) | One button | One row per rating, straight into Excel/SharePoint | `python build.py flow="<url>"` |
+| **Microsoft Forms** | Copy, paste, submit | One text blob per person, in the Form's workbook | `python build.py form="<url>"` |
+| **Export only** (default) | Download and email | `.json` / `.csv` / pre-filled email | nothing |
+
+The export buttons are always available as a fallback, whichever option you pick.
+`feedback-sample.json` shows the exact payload shape — use it to generate the schema
+in the Power Automate trigger.
 
 ## Practice data
 
