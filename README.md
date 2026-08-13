@@ -58,8 +58,14 @@ is present in this repo. Regenerate with `python make_data.py`.
 
 ## Rebuilding
 
+Source lives in `01-Accounts/Southwest Airlines/Working/_labs/` (OneDrive).
+The build output deliberately lands **outside** OneDrive at
+`C:/Users/<you>/Repos/swa-copilot-prompt-labs` — Purview auto-labeling encrypts
+`.xlsx` files written into the synced account folders, which silently corrupts the
+practice datasets for a static host. Override with the `SWA_LAB_OUT` environment variable.
+
 ```
 pip install openpyxl cryptography
-python make_data.py     # practice datasets -> build/assets
-python build.py         # labs -> build/
+python make_data.py     # practice datasets -> <out>/assets
+python build.py         # labs -> <out>
 ```
