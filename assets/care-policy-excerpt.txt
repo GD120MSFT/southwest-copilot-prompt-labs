@@ -1,0 +1,61 @@
+LONESTAR AIR — CUSTOMER CARE POLICY EXCERPTS (FICTIONAL PRACTICE DATA)
+Source: Customer Care Policy Library / SharePoint
+=======================================================================
+
+POL-REF-004  Involuntary Cancellation Refunds
+Version 6.2  —  Effective 12 March 2026  —  Owner: Refunds Policy Council
+When LoneStar Air cancels a segment, the customer is entitled to a full refund
+to the original form of payment, whether or not the fare was refundable, and
+whether or not the customer accepted a rebooking that they subsequently did
+not use. Refunds are issued within 7 business days for credit card and 20
+business days for all other forms of payment. Loyalty currency debited against
+a cancelled segment is restored in the same cycle.
+NOTE: Refunds are NOT automatic. They are initiated on request or on detection
+by the daily cancellation sweep, whichever occurs first.
+
+POL-REF-011  Alternate Transportation Purchased by the Customer
+Version 3.0  —  Effective 4 November 2025
+LoneStar Air does not reimburse third-party transportation purchased by the
+customer unless (a) it was purchased at LoneStar Air's written direction, or
+(b) a station leader authorized it at the time of disruption. Goodwill gestures
+outside this rule require Senior Specialist approval and are logged as
+exceptions.
+
+POL-LOY-002  Loyalty Currency on Disrupted Travel
+Version 2.4  —  Effective 18 January 2026
+Rapid Perks points debited for a segment that was not flown due to carrier
+cancellation are restored automatically within one accrual cycle (up to 30
+days). Manual restoration may be requested after day 30.
+KNOWN CONFLICT: The public Rapid Perks FAQ page still states "points are
+returned within 7 days". A correction has been requested (ticket KM-2291).
+
+POL-COM-009  Statements at the Point of Disruption
+Version 1.8  —  Effective 2 May 2026
+Station personnel must not characterize refunds as automatic. Where a customer
+was given incorrect information at a station, the response should acknowledge
+the inconsistency of the information provided without attributing fault to a
+named individual, and the case should be tagged STATION-COMMS for the monthly
+station feedback report.
+
+-----------------------------------------------------------------------
+PRECEDENT CASE NOTES (case-notes library)
+-----------------------------------------------------------------------
+LSA-38812 — Closed 19 May 2026 — Sr. Specialist: M. Delacroix
+Cancelled segment, refund delayed 31 days, customer purchased own alternate.
+Resolution: full segment refund + points restored + $100 goodwill credit for
+the delay in processing. Alternate transportation NOT reimbursed, per POL-REF-011.
+Rationale recorded: delay in processing was ours; the alternate purchase was
+the customer's own commercial decision.
+
+LSA-39440 — Closed 3 June 2026 — Specialist: T. Aberdeen
+Near-identical facts. Resolution: full refund + points + $250 travel credit.
+No documented rationale for the higher amount.
+FLAGGED at June calibration as an inconsistency. Guidance issued 11 June 2026:
+goodwill on processing delay is $100 unless a Senior Specialist documents a
+reason to exceed it.
+
+LSA-40015 — Closed 28 June 2026 — Specialist: C. Whitfield
+Customer told at the gate that refund was automatic. Resolution: refund +
+points + written acknowledgement that the information provided was inconsistent
+with policy. Tagged STATION-COMMS. No monetary goodwill; customer had not
+requested any.

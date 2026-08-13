@@ -1,0 +1,65 @@
+LONESTAR AIR — MONTHLY VARIANCE MEMO (FICTIONAL PRACTICE DATA)
+Period: June 2026        Prepared by: Senior Financial Reporting Analyst
+Distribution: CFO, VP Finance, Business Unit Leaders
+=======================================================================
+
+1. HEADLINE
+Operating expense for June closed at $1,712.4M against a budget of $1,668.0M,
+an unfavourable variance of $44.4M (2.7%). Two thirds of the variance sits in
+three account lines. Operating margin closed at 5.2%, 60bps below plan.
+
+2. DRIVERS
+
+2.1  Overtime  —  $17.7M unfavourable (+48.6%)
+The June irregular-operations event at MDW and DEN drove crew and ground
+overtime well beyond plan. Approximately $12.1M is directly attributable to
+the event window (11–14 June). The residual $5.6M reflects continued vacancy
+coverage in line maintenance, which has now run above plan for four
+consecutive months.
+Assessment: $12.1M is non-recurring. $5.6M is structural until the maintenance
+vacancy position closes.
+
+2.2  Cloud & Hosting  —  $9.7M unfavourable (+24.6%)
+The migration of the reservations platform ran two months longer than planned,
+so we carried duplicate on-premises and cloud cost through the whole quarter.
+Technology forecasts the duplicate run ends in August.
+Assessment: timing. Expect reversal in Q4, not Q3.
+
+2.3  Professional Fees  —  $8.4M unfavourable (+31.2%)
+Advisory spend on the fleet financing workstream was not budgeted at this
+level. $5.9M relates to work that was approved in March but not reflected in
+the June forecast.
+Assessment: structural for the remainder of the year. Forecast requires update.
+
+3. FAVOURABLE OFFSETS
+Jet fuel closed $11.2M favourable on lower into-plane pricing and a 1.8%
+reduction in block hours. Distribution closed $3.1M favourable on channel mix.
+
+4. OUTLOOK
+July operating expense is expected to remain above plan, primarily on
+professional fees and the tail of the cloud duplicate run. We expect to be
+back within 1% of plan by September.
+
+5. OPEN ITEMS CARRIED FORWARD
+•  Maintenance vacancy plan — owner: VP Technical Operations — due 15 July
+•  Fleet financing advisory forecast reset — owner: Treasury — due 22 July
+•  Confirmation of cloud duplicate-run end date — owner: CIO office — due 8 July
+•  Reconciliation of the $4.2M prior-year adjustment — owner: Financial Reporting
+
+=======================================================================
+THIS MONTH'S FIGURES (July 2026) — for the new memo
+-----------------------------------------------------------------------
+Operating expense actual:            $1,788.2M   (budget $1,701.0M)
+Operating margin:                    4.6%        (plan 5.9%)
+Overtime:                            $71.9M      (budget $52.0M)
+Cloud & Hosting:                     $58.8M      (budget $44.0M)
+Professional fees:                   $41.3M      (budget $28.0M)
+Jet fuel:                            $402.1M     (budget $421.0M)
+Maintenance — line:                  $118.4M     (budget $110.0M)
+Prior-year adjustment posted:        $4.2M       (no support attached)
+Driver notes available:              overtime = vacancy coverage continues;
+                                     cloud = duplicate run still active;
+                                     professional fees = fleet financing
+                                     Q3 phase, higher than March approval
+Missing:                             block hour data, headcount by function,
+                                     the August cloud end-date confirmation
