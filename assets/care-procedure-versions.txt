@@ -1,0 +1,69 @@
+PROCEDURE COMPARISON PACK (FICTIONAL PRACTICE DATA)
+Two versions of the same procedure. Attach or paste both.
+=======================================================================
+
+
+########################  VERSION A  —  PROC-DOC-007 v2.0  ###############
+                              Effective 4 April 2026
+                        CASE REMARKS AND DOCUMENTATION
+
+1. PURPOSE
+   To ensure every case carries a record of what was done and why.
+
+2. WHEN TO WRITE REMARKS
+   Remarks should be written before a case is closed.
+
+3. WHAT TO INCLUDE
+   A summary of the interaction in the Representative's own words.
+   Where compensation was offered, note the amount.
+
+4. FORMAT
+   Free text. No required structure.
+
+5. REVIEW
+   Remarks are spot-checked during monthly calibration.
+
+6. RETENTION
+   Remarks are retained for 24 months.
+
+
+########################  VERSION B  —  PROC-DOC-007 v2.1  ###############
+                              Effective 2 July 2026
+                        CASE REMARKS AND DOCUMENTATION
+
+1. PURPOSE
+   To ensure every case carries a defensible record of what was requested,
+   what was decided, and the basis for that decision.
+
+2. WHEN TO WRITE REMARKS
+   Remarks MUST be written before a case is closed. A case cannot be
+   closed in the system without a remarks entry.
+
+3. WHAT TO INCLUDE  —  ALL FOUR ELEMENTS ARE REQUIRED
+   (a) What the customer requested
+   (b) What was decided
+   (c) The policy basis, cited by policy number
+   (d) The amount, where any refund, credit or goodwill was issued
+   Where a decision departs from the standard outcome, the rationale must
+   be recorded and, above $100 goodwill, attributed to a named Senior
+   Specialist.
+
+4. FORMAT
+   The standard remark template. Free-text-only remarks will fail the
+   quality review and be returned to the author.
+
+5. REVIEW
+   Remarks are reviewed on every case sampled for quality, not only at
+   calibration. Failure rate is reported to team leads weekly.
+
+6. RETENTION
+   Remarks are retained for 24 months.
+
+7. RELATED
+   See POL-COM-009 for language requirements where information given at a
+   station was inconsistent with policy.
+
+-----------------------------------------------------------------------
+NOTE: A separate quick-reference card published on the Customer Care
+SharePoint in March still shows the v2.0 free-text guidance. It has not
+been withdrawn.

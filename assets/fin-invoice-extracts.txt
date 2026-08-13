@@ -1,0 +1,60 @@
+INVOICE EXTRACTS — PROFESSIONAL FEES, JULY 2026 (FICTIONAL PRACTICE DATA)
+Six invoices, as they arrive: inconsistent layouts, some fields missing.
+=======================================================================
+
+--- INVOICE 1 -------------------------------------------------------
+HALVORSEN ADVISORY GROUP LLP
+Invoice No. HAG-2026-3318            Invoice Date: 09 July 2026
+Bill To: LoneStar Air Inc, Attn: Accounts Payable
+Matter: Fleet financing — Phase 2 structuring support
+  Partner hours          38.5 @ $985/hr .................. $37,922.50
+  Associate hours        96.0 @ $520/hr .................. $49,920.00
+  Disbursements ..........................................  $1,104.20
+                                              TOTAL       $88,946.70
+PO Reference: PO-44118        Payment terms: Net 45
+Cost centre indicated by requester: CC-4020
+
+--- INVOICE 2 -------------------------------------------------------
+Meridian Talent Partners
+INV 90441 / 07-26
+Date 11/07/2026
+Executive search — VP Technical Operations (retainer, 2nd tranche)
+Amount due: USD 62,000.00
+No PO quoted.
+Requester noted "Tech Ops — charge to G&A"
+
+--- INVOICE 3 -------------------------------------------------------
+KESTREL SYSTEMS CONSULTING
+Invoice: KSC/4402                       15-Jul-2026
+Description: Reservations platform migration — cutover support,
+             weeks 27–28. Duplicate-run period.
+Units: 320 consultant hours @ $310 ............. $99,200.00
+Travel recharged .................................. $8,441.15
+                                       TOTAL     $107,641.15
+PO-43877   |   Terms Net 30
+NOTE ON INVOICE: "Extension approved verbally by CIO office 26 June."
+
+--- INVOICE 4 -------------------------------------------------------
+Brannigan & Tovar LLP
+Statement of account, July 2026
+Ref: LSA/GEN/26
+Various matters — general counsel support
+$41,300.00
+(no itemization provided; itemization requested 18 July, not yet received)
+
+--- INVOICE 5 -------------------------------------------------------
+HALVORSEN ADVISORY GROUP LLP
+Invoice No. HAG-2026-3402            Invoice Date: 28 July 2026
+Matter: Fleet financing — Phase 2 structuring support (continued)
+  Partner hours          22.0 @ $985/hr .................. $21,670.00
+  Associate hours        61.5 @ $520/hr .................. $31,980.00
+                                              TOTAL       $53,650.00
+PO Reference: PO-44118        Payment terms: Net 45
+NOTE: PO-44118 was raised in March for $90,000 total.
+
+--- INVOICE 6 -------------------------------------------------------
+Oakfield Actuarial Services
+Inv OAS-1180 · 22 July 2026
+Loyalty programme breakage study — annual refresh
+USD 28,500.00
+Charged to: Commercial (cost centre not specified)

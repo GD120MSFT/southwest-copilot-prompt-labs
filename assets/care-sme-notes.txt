@@ -1,0 +1,46 @@
+SME NOTES — COMPLEX REFUND & COMPENSATION CASES (FICTIONAL PRACTICE DATA)
+Compiled by Sr. Rep Support for the Senior Rep development track
+=======================================================================
+
+WHEN A SENIOR REP CAN ACT ALONE
+  • Involuntary cancellation refund to original form of payment, any amount.
+  • Loyalty point restoration up to 25,000 points.
+  • Goodwill credit up to $100 where the delay or error is clearly ours.
+  • Written acknowledgement of inconsistent information given at a station.
+
+WHEN TO ESCALATE TO A SPECIALIST
+  • Goodwill above $100, or any cash (not credit) compensation.
+  • Anything where the customer has used the words "attorney", "lawyer",
+    "small claims", "DOT complaint", or names a news outlet.
+  • Confirmed special-assistance failure (auto moderate risk, POL-ACC-003).
+  • Any case where two customers on the same flight are getting different
+    outcomes — consistency risk.
+
+THE FIVE POLICIES A SENIOR REP MUST KNOW COLD
+  1. POL-REF-004  Involuntary cancellation refunds — and that they are NOT automatic.
+  2. POL-REF-011  Alternate transportation — we do not reimburse unless we
+                  directed it in writing or a station leader authorized it.
+  3. POL-LOY-002  Loyalty restoration — up to 30 days, despite what the FAQ says.
+  4. POL-COM-009  Statements at the point of disruption — acknowledge the
+                  inconsistency, never name or blame an individual.
+  5. POL-ACC-003  Special assistance — confirmed failure is moderate risk minimum.
+
+THE MISTAKES WE SEE MOST
+  • Mirroring the customer's escalated language back at them.
+  • Writing "we apologize for the error on our part" — that is an admission.
+  • Promising a timeframe the refund system cannot meet.
+  • Quoting the Rapid Perks FAQ instead of POL-LOY-002.
+  • Closing the case without the four required remark elements.
+  • Solving the case in front of them and missing the pattern behind it.
+
+SYSTEMS A NEW SENIOR REP NEEDS
+  Week 1: case system (read/write), Customer Care SharePoint, the policy
+          library, the remarks template, the quality framework.
+  Week 2: refund initiation, loyalty restoration, the STATION-COMMS tag.
+  Week 3: the risk criteria, the LEGAL-24 queue, cross-team hand-off routing.
+  Week 4: calibration participation, case-notes library contribution.
+
+CASE TYPES WORTH SHADOWING
+  Involuntary cancellation with a delayed refund · special assistance failure
+  · same-flight multi-customer disruption · an attorney demand letter
+  · a case where policy and precedent disagree.

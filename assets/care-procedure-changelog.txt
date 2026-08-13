@@ -1,0 +1,49 @@
+CUSTOMER CARE — PROCEDURE & POLICY CHANGE LOG (FICTIONAL PRACTICE DATA)
+Published to the Customer Care SharePoint announcements list
+Window: 15 June 2026 – 31 July 2026
+=======================================================================
+
+2026-07-28  |  POL-REF-004 v6.3  |  Involuntary Cancellation Refunds
+   Refund initiation window tightened from 10 business days to 7 for
+   credit card. Adds an explicit statement that refunds are NOT automatic.
+   AFFECTS: All Advocacy Specialists, LA Reps.
+   ACTION: Stop using the phrase "processed automatically" in responses.
+
+2026-07-21  |  PROC-ESC-013 v4.0  |  Escalation to Legal
+   Small-claims notices now route to Legal within 24 hours (was 72).
+   AFFECTS: Senior Specialists, Sr. Rep Support.
+   ACTION: Use the new LEGAL-24 queue, not the general escalation queue.
+
+2026-07-14  |  GUIDANCE  |  Goodwill on processing delays
+   Standard goodwill for a refund processing delay is $100. Amounts above
+   this require a documented Senior Specialist rationale in the case.
+   AFFECTS: All Specialists.
+   NOTE: Issued after the June calibration flagged LSA-39440 ($250, no
+   rationale) as inconsistent with LSA-38812 ($100).
+
+2026-07-02  |  PROC-DOC-007 v2.1  |  Case remarks format
+   Remarks must now record: request, decision, policy basis, amount.
+   Free-text-only remarks will fail the quality review.
+   AFFECTS: All Reps and Specialists.
+
+2026-06-25  |  POL-ACC-003 v1.4  |  Special assistance failures
+   Any case involving a confirmed assistance request that was not met is
+   now automatically classified moderate risk minimum.
+   AFFECTS: Sr. Rep Support (risk triage).
+
+2026-06-18  |  POL-COM-009 v1.8  |  Statements at the point of disruption
+   Adds the STATION-COMMS tag and the required acknowledgement language.
+   AFFECTS: All Reps.
+
+-----------------------------------------------------------------------
+ONE-OFF EXCEPTIONS WE HAVE BEEN ASKED TO HANDLE (not yet in any procedure)
+-----------------------------------------------------------------------
+•  17 Jul — MDW ground stop: leadership asked us to waive the 24-hour
+   documentation requirement for affected cases. No end date given.
+•  22 Jul — A partner-carrier codeshare batch is being handled manually
+   by two named Specialists. Not documented anywhere.
+•  30 Jul — Executive Office asked for same-day acknowledgement on any
+   case mentioning a named news outlet. Verbal instruction only.
+
+KNOWN CONFLICT: The public Rapid Perks FAQ still says points return in
+7 days; POL-LOY-002 says up to 30. Correction ticket KM-2291 is open.

@@ -1,0 +1,38 @@
+CASE LSA-41883  —  REFUND CLAIM WORKSHEET  (FICTIONAL PRACTICE DATA)
+=======================================================================
+Opened:            29 July 2026, 08:12
+Channel:           Web form
+Customer:          Dana Whitmore     Rapid Perks #: LS-4471-9930
+Confirmation:      KQ8ZR4
+Segment:           LS1184  DAL–MDW  6 July 2026, dep 17:40
+Fare paid:         $238.60 (Wanna Fly Away, non-refundable fare class)
+Points debited:    2,140
+
+WHAT THE CUSTOMER IS ASKING FOR
+  1. Refund of the cancelled LS1184 segment ................ $238.60
+  2. Restoration of 2,140 Rapid Perks points
+  3. Explanation of a statement made at the gate that the refund
+     would be "automatic"
+  4. NOT requesting reimbursement of the $412 alternate carrier fare
+     (customer explicitly declined to claim this)
+
+WHAT WE KNOW
+  • LS1184 was cancelled by LoneStar Air at 16:09 on 6 July (crew legality).
+  • No seat was available on the 21:15; customer was not rebooked.
+  • Customer contacted us 14 Jul, 22 Jul and 29 Jul. Only an automated
+    acknowledgement was sent.
+  • The daily cancellation sweep did not pick up this PNR. Reason unknown.
+  • Points restoration has not run. Day 23 as of today.
+
+DECISION TAKEN BY SPECIALIST (to be documented)
+  Refund approved:            $238.60 to original form of payment
+  Points:                     2,140 restored, manual
+  Goodwill:                   $100 credit for the processing delay
+  Alternate transportation:   Not reimbursed (customer did not request)
+  Policy basis:               POL-REF-004 (involuntary cancellation refund)
+                              POL-LOY-002 (loyalty restoration)
+                              POL-REF-011 (alternate transportation)
+                              June 2026 calibration guidance ($100 standard)
+  Tag:                        STATION-COMMS (gate statement, POL-COM-009)
+
+REMARKS FIELD  —  currently blank, needs writing

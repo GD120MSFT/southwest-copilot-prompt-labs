@@ -1,0 +1,63 @@
+LONESTAR AIR — MONTH-END CLOSE PROCESS (FICTIONAL PRACTICE DATA)
+Financial Reporting  ·  Process document  ·  Last updated 14 March 2026
+=======================================================================
+
+OVERVIEW
+The close runs over eight business days. Financial Reporting coordinates;
+FP&A, Treasury and the business units contribute inputs. The process below
+is written as narrative because that is how it was handed over.
+
+THE PROCESS
+
+On the final calendar day of the month the reporting mailbox sends the
+cut-off notice to all cost centre owners. Anything received after noon on
+business day two is accrued rather than posted, though in practice we have
+accepted late items up to business day four when the amount is material and
+the owner has called ahead.
+
+Business day one is systems. The Accounting Systems Specialist runs the
+subledger close in sequence — AP, then AR, then fixed assets — and confirms
+each has closed cleanly before starting the next. If AP fails, everything
+behind it waits. There is a check on the interface log which somebody
+should do but which is not written down anywhere.
+
+Business day two, the cost centre extracts come out of SAP. These arrive in
+whatever format the requester configured, which is a recurring problem —
+merged headers and numbers stored as text are normal. Financial Reporting
+normalizes them by hand into the standard template. This takes most of a day.
+
+Business day three and four are the journals. Standard recurring journals
+post first. Depreciation is entered manually from the asset register rather
+than linked, which is a known weakness. The prior-year adjustment, if there
+is one, is posted here and requires the VP Finance's email approval, though
+that approval is sometimes given verbally and written up afterwards.
+
+Business day five the statements are drafted. The Financial Reporting Senior
+Accountant checks the workbook — cross-tab ties, formula integrity, and the
+summary against the detail. This check is the last line of defence and is
+performed by one person.
+
+Business day six the variance memo is drafted by the Senior Financial
+Reporting Analyst, using the prior month as a pattern. It cannot be
+completed until FP&A supply driver notes, which they supply when they can.
+
+Business day seven is review. The CFO reviews the memo and the statements.
+Comments come back the same day, usually late.
+
+Business day eight the package is issued. Treasury separately confirms cash
+and investment positions, which is not really part of this process but
+happens in the same window and is often confused with it.
+
+KNOWN ISSUES NOBODY HAS OWNED
+  • The interface log check on business day one.
+  • Depreciation entered manually.
+  • The extract format changing without notice.
+  • Verbal approval on the prior-year adjustment.
+  • Driver notes arriving late and gating the memo.
+  • Everything downstream of the statement integrity check depends on one
+    person being available.
+
+SYSTEMS
+  SAP (subledgers, extracts) · Anaplan (budget/forecast) · Excel (statements,
+  workpapers) · SharePoint (memos, checklists, process docs) · Workiva (SOX
+  evidence) · Quickbase (variance commentary distribution)
