@@ -93,11 +93,47 @@ person rather than one row per rating.
 
 ---
 
-## Option 3 — Export only (the default today)
+## Option 3 — Export only (the fallback)
 
 No endpoint configured. Participants use **Download .json**, **Download .csv** or
-**Open an email**, and send it to the change lead. Fine for a facilitated session
-where you're in the room; weak for self-serve use afterward.
+**Open an email**. Fine as a safety net; **do not rely on it as your only path** —
+in self-serve use, almost nobody downloads a file and emails it to someone.
+The export buttons stay available under every option above.
+
+---
+
+## "Could it write the feedback into the GitHub repo?"
+
+Short answer: technically yes, but don't. Here's the honest reasoning.
+
+To write to a repo from a static page you need a credential in the page — a PAT or
+an App token. That token would be:
+
+- **Extractable.** It sits inside the encrypted payload, so it's not readable
+  without the passphrase, but any participant who unlocks the lab can pull it out
+  of memory. A leaked token with `repo` scope lets someone rewrite or delete the
+  repo, including the labs themselves.
+- **Rotating constantly.** Fine-grained PATs expire; you'd be rebuilding the labs
+  on the token's schedule rather than on yours.
+- **Wrong permission model.** Southwest participants would be writing into a
+  Microsoft-side repo with a shared identity. You get no idea who submitted what,
+  and everything lands in one commit history you have to parse by hand.
+
+Two GitHub-shaped variants and why they still don't fit:
+
+| Variant | Why not |
+|---|---|
+| `repository_dispatch` / Actions workflow | Still needs a token in the page. Same exposure. |
+| Pre-filled **New Issue** URL | No token needed, but every participant needs a GitHub account and access to the repo. Southwest employees won't have one. Dead end. |
+
+**The Power Automate flow (Option 1) is the same idea done safely** — one button,
+no download, data lands somewhere you already own. Its endpoint is also a secret,
+but the blast radius is "junk rows in a feedback list" rather than "write access
+to the repository". That is the trade worth making.
+
+If you want identity attached to every submission with no secret in the page at
+all, use **Option 2 (Forms)** — Forms authenticates the submitter with their
+Southwest account.
 
 ---
 
