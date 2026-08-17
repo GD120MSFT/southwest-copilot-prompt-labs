@@ -29,9 +29,42 @@ print("evaluate   :", len(d["evaluate"]["verdict"]), "verdicts,",
 c1 = [p for p in d["prompts"] if p["num"] == "C1"][0]
 print("C1         :", c1["persona"], [s["r"] for s in c1["seg"]])
 print("demo also  :", [p for p in d["personas"] if p["id"] == "demo"][0]["also"])
-print("demo day   :", [(i["t"], i["n"]) for i in d["day"]["demo"]])
-
 fails = []
+print("demo day   :", [(i["t"], i["n"], len(i.get("u", []))) for i in d["day"]["demo"]])
+print("case pack  :", len(d.get("casePack", [])), "files;", len(d["assets"]), "assets embedded")
+
+pack = d.get("casePack", [])
+if len(pack) != 8:
+    fails.append("demo case pack is not 8 files")
+for n in pack:
+    a = d["assets"].get(n)
+    if not a:
+        fails.append("case pack file not embedded: " + n)
+    elif not a["uri"].startswith("data:application/vnd.openxmlformats"):
+        fails.append("case pack file has the wrong mime type: " + n)
+    elif a["kb"] < 5:
+        fails.append("case pack file looks empty: " + n)
+if not d.get("casePackNote"):
+    fails.append("case pack has no explanatory note")
+for i, step in enumerate(d["day"]["demo"]):
+    if not step.get("u"):
+        fails.append("demo day step %d names no practice file" % (i + 1))
+    for n in step.get("u", []):
+        if n not in d["assets"]:
+            fails.append("demo step %d points at a missing file %s" % (i + 1, n))
+# the pack shipped under a second invented carrier -- make sure none of it leaked
+import zipfile, io
+for n in pack:
+    a = d["assets"].get(n)
+    if not a:
+        continue
+    raw = base64.b64decode(a["uri"].split(",", 1)[1])
+    z = zipfile.ZipFile(io.BytesIO(raw))
+    txt = " ".join(z.read(p).decode("utf-8", "ignore") for p in z.namelist()
+                   if p.endswith(".xml") and ("document" in p or "sharedStrings" in p or "sheet" in p))
+    if "kyline" in txt:
+        fails.append("%s still mentions the original carrier" % n)
+
 if [s["id"] for s in d["sections"]][:3] != ["housekeeping", "anatomy", "evaluate"]:
     fails.append("care sections not reordered")
 if not d["gated"]:
