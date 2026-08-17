@@ -3,10 +3,18 @@
 Two interactive, passphrase-protected hands-on labs that run the 90-minute persona
 training session and stay usable self-serve afterward.
 
-| Lab | File | Prompts |
+| Lab | File | Contents |
 |---|---|---|
-| Customer Care | `customer-care.html` | 48 prompts, 10 use cases, 5 roles |
-| Finance | `finance.html` | 36 prompts, 8 use cases, 6 roles |
+| Customer Care | `customer-care.html` | 41 prompts, 6 roles (incl. the session Demo role), sections gated |
+| Finance | `finance.html` | 30 prompts, 6 roles |
+
+**Customer Care v2 (Aug 2026)** runs the "Prompt to Practice" session:
+sections unlock in order (`?facilitator=1` opens everything for the presenter);
+the spine is Housekeeping -> Anatomy of a prompt -> Your prompt -> Day in the life
+-> hands-on; CARE's own response-drafting prompt ships as library entry `C1` and is
+pulled apart against Goal / Context / Source / Expectations; every prompt can be
+colour-coded in place with the **Show anatomy** toggle; the library carries prompts
+only (the scored use cases live with the change team).
 
 ## Publish on GitHub Pages
 
