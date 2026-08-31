@@ -1,77 +1,52 @@
 # Capturing the feedback
 
-GitHub Pages is a **static host** — there is no server behind the page to receive a
-form post. So the lab has to hand its data to something else. Three options, in
-the order I'd recommend them.
+GitHub Pages is a **static host** - there is no server behind the page to receive a
+form post. So the lab has to hand its data to something else.
 
 Participants' ratings, comments and new prompts always save to their own browser
 (`localStorage`) as they go, so nothing is lost regardless of which option you pick.
-The **Download .json / .csv / email** buttons are always present as a fallback.
+The **Download .json / .csv** buttons are always present as a fallback.
 
 ---
 
-## Option 1 — Power Automate HTTP flow  (recommended)
+## Option 1 - Email  (default, and what the SWA labs use)
 
-One button for the participant, structured rows for you. This is the only option
-with zero copy-paste.
-
-### Build the flow
-
-1. Go to **make.powerautomate.com** → **Create** → **Instant cloud flow** → skip the
-   trigger picker → search for **"When an HTTP request is received"**.
-2. In the trigger, click **Use sample payload to generate schema** and paste the
-   sample in `feedback-sample.json` (in this repo). That gives you typed fields.
-3. Set **Who can trigger the flow?** to **Anyone**. (The URL contains a signature —
-   treat it as a secret. See the security note below.)
-4. Add an action to store it. Two good shapes:
-
-   **Simplest — one row per submission** (Excel or a SharePoint list):
-   add **Add a row into a table** / **Create item** and map:
-   `submissionId`, `submitted`, `businessUnit`, `role`, `name`, `team`,
-   `ratingCount`, `newPromptCount`, `averageStars`.
-   Then add a second column holding `ratings` and `newPrompts` as raw JSON.
-
-   **Better for analysis — one row per rating**: add **Apply to each** over
-   `ratings`, and inside it **Add a row into a table** mapping
-   `libraryRef`, `title`, `application`, `kpi`, `stars`, `comment` plus the
-   submission-level fields. Repeat a second **Apply to each** over `newPrompts`
-   writing into a second table.
-
-5. **Save**, then copy the **HTTP POST URL** from the trigger.
-
-### Point the labs at it
-
-From `Working\_labs`:
+One button for the participant. The lab copies their feedback to the clipboard
+**and** opens their mail client with a pre-addressed, pre-written message. They
+check it and press Send.
 
 ```
-python build.py flow="https://prod-XX.westus.logic.azure.com:443/workflows/..."
+python build.py mail="you@microsoft.com"
 ```
 
-Rebuild, re-copy the HTML into the repo, push. The **Send my feedback** button
-now posts straight into your table.
-
-Per-lab endpoints if you want Care and Finance in different tables:
+Per-lab addresses if Care and Finance should go to different people:
 
 ```
-python build.py careflow="https://..." finflow="https://..."
+python build.py caremail="a@x.com" finmail="b@x.com"
 ```
 
-### Notes that will save you an afternoon
+### Why the clipboard copy as well
 
-- The lab posts with `Content-Type: text/plain` **on purpose**. That keeps it a
-  CORS "simple request" so the browser never sends a preflight `OPTIONS`, which
-  Power Automate does not answer. Power Automate still parses the body as JSON if
-  you generated the schema in step 2. Don't "fix" this to `application/json`.
-- If a post fails, the participant sees a clear message and their data stays in
-  the browser — they can still export it.
-- Test it before the session: open the lab, rate one prompt, hit send, confirm
-  the row lands.
+`mailto:` has a practical ceiling around 2000 characters once URL-encoded. A
+participant who rates fifteen prompts and writes two of their own will exceed it,
+and the browser truncates silently. So the lab does both: under the ceiling the
+whole thing goes into the message body; over it, the body carries a readable head
+plus a line telling the participant to press Ctrl+V, and the full text is already
+on their clipboard. Nothing is lost either way.
+
+### What it costs you
+
+You get a readable email per participant rather than structured rows. If you want
+rows, paste the bodies into the same shape as `feedback-sample.json`, or use
+Option 2. For a session-sized audience the email is usually the better trade -
+there is nothing to build, nothing to maintain, and nothing to remediate.
 
 ---
 
-## Option 2 — Microsoft Forms
+## Option 2 - Microsoft Forms
 
-Lower fidelity, but nothing to maintain and the data lands in Excel automatically.
+Higher fidelity than email if you want the submitter's identity attached and the
+responses landing in a workbook automatically.
 
 1. Create a Form with one **Long answer** question, e.g. *"Paste your lab feedback
    here"*. Add short-answer questions for **Name**, **Business unit** and **Role**
@@ -83,76 +58,63 @@ Lower fidelity, but nothing to maintain and the data lands in Excel automaticall
 python build.py form="https://forms.office.com/r/XXXXXXXX"
 ```
 
-The button then copies the participant's feedback to the clipboard and opens the
-Form in a new tab — they paste with Ctrl+V and press Submit. This is the same
-pattern used in the Manulife champion walkthrough, so it's proven with a live
-audience.
+The button copies the participant's feedback to the clipboard and opens the Form
+in a new tab - they paste with Ctrl+V and press Submit. This is the same pattern
+used in the Manulife champion walkthrough, so it is proven with a live audience.
 
-Responses land in the Form's Excel workbook. You get one long text blob per
-person rather than one row per rating.
-
----
-
-## Option 3 — Export only (the fallback)
-
-No endpoint configured. Participants use **Download .json**, **Download .csv** or
-**Open an email**. Fine as a safety net; **do not rely on it as your only path** —
-in self-serve use, almost nobody downloads a file and emails it to someone.
-The export buttons stay available under every option above.
+Forms authenticates the submitter with their own account, so you get identity for
+free and there is no endpoint anywhere in the page.
 
 ---
 
-## "Could it write the feedback into the GitHub repo?"
+## Option 3 - Export only (the fallback)
 
-Short answer: technically yes, but don't. Here's the honest reasoning.
+No destination configured. Participants use **Download .json**, **Download .csv**
+or **Open an email**. Fine as a safety net; do not rely on it as your only path -
+in self-serve use, almost nobody downloads a file and emails it to someone. The
+export buttons stay available under every option above.
 
-To write to a repo from a static page you need a credential in the page — a PAT or
-an App token. That token would be:
+---
 
-- **Extractable.** It sits inside the encrypted payload, so it's not readable
-  without the passphrase, but any participant who unlocks the lab can pull it out
-  of memory. A leaked token with `repo` scope lets someone rewrite or delete the
-  repo, including the labs themselves.
-- **Rotating constantly.** Fine-grained PATs expire; you'd be rebuilding the labs
-  on the token's schedule rather than on yours.
-- **Wrong permission model.** Southwest participants would be writing into a
-  Microsoft-side repo with a shared identity. You get no idea who submitted what,
-  and everything lands in one commit history you have to parse by hand.
+## Power Automate HTTP flows - do not use
 
-Two GitHub-shaped variants and why they still don't fit:
+The original version of these labs POSTed to a Power Automate flow with a
+**"When an HTTP request is received"** trigger set to **"Who can trigger the flow?
+= Anyone"**. That is a security finding:
 
-| Variant | Why not |
+| | |
 |---|---|
-| `repository_dispatch` / Actions workflow | Still needs a token in the page. Same exposure. |
-| Pre-filled **New Issue** URL | No token needed, but every participant needs a GitHub account and access to the repo. Southwest employees won't have one. Dead end. |
+| Control | **LCNC-PP-82** |
+| Rule | **ZN_P00145** - "Flow is exposed to the Internet" |
+| Severity | **High** (Oversharing / Least Privilege) |
+| Standard | 09.01.01-05: Internet IP Surface Area |
+| Risk | Anyone holding the trigger URL can run the flow |
 
-**The Power Automate flow (Option 1) is the same idea done safely** — one button,
-no download, data lands somewhere you already own. Its endpoint is also a secret,
-but the blast radius is "junk rows in a feedback list" rather than "write access
-to the repository". That is the trade worth making.
+The documented remediation is to delete the flow, or restrict the trigger to
+**"Specific users in my tenant"** and list the allowed Entra IDs. The second
+option does not work for a customer-facing lab - the participants are Southwest
+employees, outside our tenant - so **the flow was deleted on 2026-08-31** and the
+feedback it had already collected was preserved.
 
-If you want identity attached to every submission with no secret in the page at
-all, use **Option 2 (Forms)** — Forms authenticates the submitter with their
-Southwest account.
+`build.py` now refuses a `flow=` argument so this cannot be rebuilt by accident.
+
+Guidance: https://eng.ms/docs/microsoft-security/ciso-organization/sr-assurance/productivity-security-service/power-platform-service/lcnc-security-monitoring/troubleshooting-guides/lcnc-pp-82
+
+### "Could it write the feedback into the GitHub repo?"
+
+No. That needs a token in the page. The token sits inside the encrypted payload,
+so it is not readable without the passphrase, but any participant who unlocks the
+lab can pull it out of memory - and a leaked token with `repo` scope lets someone
+rewrite or delete the repo, including the labs themselves. Pre-filled **New Issue**
+URLs avoid the token but require every participant to have a GitHub account with
+access to the repo, which Southwest employees will not have.
 
 ---
-
-## Security, stated plainly
-
-- The flow URL is a **bearer secret**: anyone who has it can POST to your flow.
-  It sits inside the encrypted lab payload, so it is not readable without the
-  passphrase — but a participant could extract it after unlocking.
-- Worst realistic case is junk rows in a feedback table. Do **not** point the flow
-  at anything that writes to a production system, and don't reuse the flow for
-  anything sensitive.
-- If that risk is unacceptable, use Option 2 (Forms) — Forms authenticates the
-  submitter with their Southwest account and you get identity for free.
-- Rotate the flow URL by regenerating the trigger URL in Power Automate and
-  rebuilding the labs.
 
 ## What you get back
 
-See `feedback-sample.json` for the exact shape. Per submission you get the role,
-optional name and team, an average star rating, one entry per rated prompt
-(with its library reference number and KPI theme so it joins straight back to
-your workbook), and every new prompt the participant wrote.
+See `feedback-sample.json` for the exact shape of a submission: the role, optional
+name and team, an average star rating, one entry per rated prompt (with its library
+reference number and KPI theme so it joins straight back to your workbook), and
+every new prompt the participant wrote. The email body in Option 1 carries the same
+information in readable form.

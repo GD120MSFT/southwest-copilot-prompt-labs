@@ -55,17 +55,21 @@ then re-copy the regenerated HTML files into the repo.
 GitHub Pages is static, so there is no backend. Participants' ratings and prompt ideas
 save to their own browser (`localStorage`) as they go.
 
-**See `FEEDBACK.md` for the full setup.** Short version — three options:
+**See `FEEDBACK.md` for the full setup.** Short version:
 
 | Option | Participant effort | What you get | Set it up |
 |---|---|---|---|
-| **Power Automate HTTP flow** (recommended) | One button | One row per rating, straight into Excel/SharePoint | `python build.py flow="<url>"` |
+| **Email** (default) | One button, then Send | A written email per person, in your inbox | `python build.py mail="<address>"` |
 | **Microsoft Forms** | Copy, paste, submit | One text blob per person, in the Form's workbook | `python build.py form="<url>"` |
-| **Export only** (default) | Download and email | `.json` / `.csv` / pre-filled email | nothing |
+| **Export only** | Download and email | `.json` / `.csv` / pre-filled email | `SUBMIT` mode `none` |
+
+> **Power Automate HTTP flows are not an option here.** An unauthenticated
+> "When an HTTP request is received" trigger violates Microsoft control
+> **LCNC-PP-82 / ZN_P00145** ("Flow is exposed to the Internet", High severity).
+> The flow that backed this lab was deleted on 2026-08-31 to remediate the
+> finding, and `build.py` now refuses a `flow=` argument.
 
 The export buttons are always available as a fallback, whichever option you pick.
-`feedback-sample.json` shows the exact payload shape — use it to generate the schema
-in the Power Automate trigger.
 
 ## Practice data
 
